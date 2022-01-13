@@ -7,3 +7,6 @@ toy-project: MBTI게시판
 ### 2. MBTI 별 궁합
 ### 3. MBTI 고민 게시판
 > 해당 mbti의 사람들만 댓글,투표할 수 있다.
+
+## 참고 사이트
+[모티브 사이트](https://whdrnr01.tistory.com/765)
