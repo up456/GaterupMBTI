@@ -18,125 +18,114 @@
 <body>
   <section class="mbti">
 
-    <div class="mbti__section mbti__top">
+    <div class="mbti__section">
       <ul class="mbti__box">
-        <li class="mbti__description">
+        <li class="mbti__description hidden" data-out="e">
           ▪폭넓은 대인 관계 유지.<br />
           ▪사교적, 정열적, 활동적.<br />
           ▪외부로 부터 에너지 얻음.<br />
         </li>
-        <li class="mbti__title">
+        <li class="mbti__title" data-in="e">
           외향형<br />
           Extraversion
         </li>
-        <li class="mbti__alphabet" id="e">E</li>
-        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-up"></i></li>
+        <li class="mbti__alphabet" id="e" data-in="e">E</li>
+        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-up" data-in="e"></i></li>
         <li id="mbti__topic">
           에너지방향,<br />
           주의초점
         </li>
-      </ul>
-      <ul class="mbti__box">
-        <li class="mbti__description">
-          ▪오감에 의존, 실제 경험 중시.<br />
-          ▪현재지향적.<br />
-          ▪정확, 철저히 일처리.<br />
-        </li>
-        <li class="mbti__title">
-          감각형<br />
-          Sensing
-        </li>
-        <li class="mbti__alphabet" id="s">S</li>
-        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-up"></i></li>
-        <li id="mbti__topic">
-          인식기능<br />
-          (정보수집)
-        </li>
-      </ul>
-      <ul class="mbti__box">
-        <li class="mbti__description">
-          ▪진실과 사실에 주관심.<br />
-          ▪논리적, 분석적, 객관적 판단.<br />
-          <br />
-        </li>
-        <li class="mbti__title">
-          사고형<br />
-          Extraversion
-        </li>
-        <li class="mbti__alphabet" id="t">T</li>
-        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-up"></i></li>
-        <li id="mbti__topic">
-          판단기능<br />
-          (판단, 결정)
-        </li>
-      </ul>
-      <ul class="mbti__box">
-        <li class="mbti__description">
-          ▪분명한 목적과 방향.<br />
-          ▪기한 엄수.<br />
-          ▪철저한 사전계획, 체계적.<br />
-        </li>
-        <li class="mbti__title">
-          판단형<br />
-          Judging
-        </li>
-        <li class="mbti__alphabet" id="j">J</li>
-        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-up"></i></li>
-        <li id="mbti__topic">
-          이행양식<br />
-          (생활양식)
-        </li>
-      </ul>
-    </div>
-    <div class="mbti__middle"></div>
-    <div class="mbti__section mbti__bottom">
-      <ul class="mbti__box">
-        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-down"></i></li>
-        <li class="mbti__alphabet" id="i">I</li>
-        <li class="mbti__title">
+        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-down" data-in="i"></i></li>
+        <li class="mbti__alphabet" id="i" data-in="i">I</li>
+        <li class="mbti__title" data-in="i">
           내향형<br />
           Introversion
         </li>
-        <li class="mbti__description">
+        <li class="mbti__description hidden" data-out="i">
           ▪깊이있는 대인관계 유지.<br />
           ▪신중한 스타일.<br />
           ▪혼자있을 때 에너지를 얻음.<br />
         </li>
       </ul>
       <ul class="mbti__box">
-        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-down"></i></li>
-        <li class="mbti__alphabet" id="n">N</li>
-        <li class="mbti__title">
+        <li class="mbti__description hidden" data-out="s">
+          ▪오감에 의존, 실제 경험 중시.<br />
+          ▪현재지향적.<br />
+          ▪정확, 철저히 일처리.<br />
+        </li>
+        <li class="mbti__title" data-in="s">
+          감각형<br />
+          Sensing
+        </li>
+        <li class="mbti__alphabet" id="s" data-in="s">S</li>
+        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-up" data-in="s"></i></li>
+        <li id="mbti__topic">
+          인식기능<br />
+          (정보수집)
+        </li>
+        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-down" data-in="n"></i></li>
+        <li class="mbti__alphabet" id="n" data-in="n">N</li>
+        <li class="mbti__title" data-in="n">
           직관형<br />
           iNtuition
         </li>
-        <li class="mbti__description">
+        <li class="mbti__description hidden" data-out="n">
           ▪육감 내지 영감에 의존.<br />
           ▪미래지향적, 가능성과 의미추구.<br />
           ▪신속, 비약적으로 일처리.<br />
         </li>
       </ul>
       <ul class="mbti__box">
-        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-down"></i></li>
-        <li class="mbti__alphabet" id="f">F</li>
-        <li class="mbti__title">
+        <li class="mbti__description hidden" data-out="t">
+          ▪진실과 사실에 주관심.<br />
+          ▪논리적, 분석적, 객관적 판단.<br />
+          <br />
+        </li>
+        <li class="mbti__title" data-in="t">
+          사고형<br />
+          Thinking
+        </li>
+        <li class="mbti__alphabet" id="t" data-in="t">T</li>
+        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-up" data-in="t"></i></li>
+        <li id="mbti__topic">
+          판단기능<br />
+          (판단, 결정)
+        </li>
+        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-down" data-in="f"></i></li>
+        <li class="mbti__alphabet" id="f" data-in="f">F</li>
+        <li class="mbti__title" data-in="f">
           감정형<br />
           Feeling
         </li>
-        <li class="mbti__description">
+        <li class="mbti__description hidden" data-out="f">
           ▪사람관계에 주관심.<br />
           ▪감정 & 공감이 중요<br />
           <br />
         </li>
       </ul>
       <ul class="mbti__box">
-        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-down"></i></li>
-        <li class="mbti__alphabet" id="p">P</li>
-        <li class="mbti__title">
+        <li class="mbti__description hidden" data-out="j">
+          ▪분명한 목적과 방향.<br />
+          ▪기한 엄수.<br />
+          ▪철저한 사전계획, 체계적.<br />
+        </li>
+        <li class="mbti__title" data-in="j">
+          판단형<br />
+          Judging
+        </li>
+        <li class="mbti__alphabet" id="j" data-in="j">J</li>
+        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-up" data-in="j"></i></li>
+        <li id="mbti__topic">
+          이행양식<br />
+          (생활양식)
+        </li>
+        <li class="mbti__arrow"><i class="fas fa-long-arrow-alt-down" data-in="p"></i></li>
+        <li class="mbti__alphabet" id="p" data-in="p">P</li>
+        <li class="mbti__title" data-in="p">
           인식형<br />
           Perceiving
         </li>
-        <li class="mbti__description">
+        <li class="mbti__description hidden" data-out="p">
           ▪목적과 방향은 변화 가능.<br />
           ▪상황에 따라 일정 변경.<br />
           ▪자율적이고 융통성이 있음.<br />

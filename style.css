@@ -7,6 +7,15 @@
   /* color */
   --main-font-color: #333;
   --alphabet-color: #666;
+  /* mbti-color */
+  --e-color: lightcoral;
+  --i-color: lightskyblue;
+  --s-color: yellowgreen;
+  --n-color: deeppink;
+  --t-color: crimson;
+  --f-color: blueviolet;
+  --j-color: aquamarine;
+  --p-color: orange;
 }
 
 * {
@@ -21,6 +30,8 @@ li {
 body {
   font-family: 'Noto Sans KR', sans-serif;
   color:var(--main-font-color);
+  background-color: #000;
+  color: #999;
 }
 
 /* mbti 공통 부분 */
@@ -29,8 +40,9 @@ body {
 }
 .mbti__section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
 }
 .mbti__box {
   width: 15rem;
@@ -38,12 +50,15 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.mbti__box .mbti__description{
 
+.mbti__box .mbti__description{
+  color: #fff;
+  transition: 300ms ease-in;
 }
 .mbti__box .mbti__title {
   font-size: var(--mbti-title-font-size);
   font-weight: bold;
+  color: #fff;
 }
 .mbti__top> .mbti__box .mbti__title{
   padding-top: var(--space-size);
@@ -58,6 +73,8 @@ body {
   color: var(--alphabet-color);
   margin-top: var(--sapce-minus-size);
   margin-bottom: calc(var(--sapce-minus-size)*2);
+  transition: 200ms ease-in;
+  cursor: pointer;
 }
 
 .mbti__box .mbti__arrow{
@@ -67,12 +84,100 @@ body {
   padding: var(--space-size);
   font-size: var(--topic-font-size);
   font-weight: bold;
-}
-
-.mbti__middle {
+  background-color: #fff;
   width: 100%;
-  height: 4.4rem;
-  background-color: rgb(233, 229, 229);
-  margin-top: -4.3rem;
+  color: #000;
 }
 
+/* 구역별 색상 */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* 설명 색상 및 margin*/
+.mbti__box:nth-child(1) .mbti__description:nth-child(1) {
+  color: var(--e-color);
+  margin-bottom: var(--space-size);
+}
+.mbti__box:nth-child(1) .mbti__description:nth-child(9) {
+  color: var(--i-color);
+  margin-top: var(--space-size);
+}
+.mbti__box:nth-child(2) .mbti__description:nth-child(1) {
+  color: var(--s-color);
+  margin-bottom: var(--space-size);
+}
+.mbti__box:nth-child(2) .mbti__description:nth-child(9) {
+  color: var(--n-color);
+  margin-top: var(--space-size);
+}
+.mbti__box:nth-child(3) .mbti__description:nth-child(1) {
+  color: var(--t-color);
+  margin-bottom: var(--space-size);
+}
+.mbti__box:nth-child(3) .mbti__description:nth-child(9) {
+  color: var(--f-color);
+  margin-top: var(--space-size);
+}
+.mbti__box:nth-child(4) .mbti__description:nth-child(1) {
+  color: var(--j-color);
+  margin-bottom: var(--space-size);
+}
+.mbti__box:nth-child(4) .mbti__description:nth-child(9) {
+  color: var(--p-color);
+  margin-top: var(--space-size);
+}
+
+/* 화살표 색상  */
+.mbti__box:nth-child(1) .mbti__arrow:nth-child(4) {
+  color: var(--e-color);
+}
+.mbti__box:nth-child(1) .mbti__arrow:nth-child(6) {
+  color: var(--i-color);
+}
+.mbti__box:nth-child(2) .mbti__arrow:nth-child(4) {
+  color: var(--s-color);
+}
+.mbti__box:nth-child(2) .mbti__arrow:nth-child(6) {
+  color: var(--n-color);
+}.mbti__box:nth-child(3) .mbti__arrow:nth-child(4) {
+  color: var(--t-color);
+}
+.mbti__box:nth-child(3) .mbti__arrow:nth-child(6) {
+  color: var(--f-color);
+}
+.mbti__box:nth-child(4) .mbti__arrow:nth-child(4) {
+  color: var(--j-color);
+}
+.mbti__box:nth-child(4) .mbti__arrow:nth-child(6) {
+  color: var(--p-color);
+}
+
+
+
+/* 알파뱃 hover */
+#e:hover {
+  color: var(--e-color);
+}
+#i:hover {
+  color: var(--i-color);
+}
+#s:hover {
+  color: var(--s-color);
+}
+#n:hover {
+  color: var(--n-color);
+}
+#t:hover {
+  color: var(--t-color);
+}
+#f:hover {
+  color: var(--f-color);
+}
+#j:hover {
+  color: var(--j-color);
+}
+#p:hover {
+  color: var(--p-color);
+}
