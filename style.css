@@ -4,6 +4,7 @@
   --sapce-minus-size: -0.5rem;
   --mbti-title-font-size: 1.2rem;
   --topic-font-size : 1.1rem;
+  --mbti_seleted-size: 4rem;
   /* color */
   --main-font-color: #333;
   --alphabet-color: #666;
@@ -16,6 +17,9 @@
   --f-color: blueviolet;
   --j-color: aquamarine;
   --p-color: orange;
+  /* font */
+  --main-font: 'Noto Sans KR', sans-serif;
+  --alphabet-font : 'Jua', sans-serif;
 }
 
 * {
@@ -28,16 +32,62 @@ li {
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: var(--main-font);
   color:var(--main-font-color);
   background-color: #000;
   color: #999;
 }
 
-/* mbti 공통 부분 */
 .mbti {
   margin-top: 1rem;
 }
+
+/* mbti 헤더 */
+.mbti__header {
+  background-color: rgba(255, 255, 255, 0.13);
+  width: 64%;
+  height: 130px;
+  margin: 0 auto;
+  margin-bottom: var(--space-size);
+  text-align: center;
+  padding: var(--space-size);
+}
+.mbti__header .mbti__header__help {
+  font-size: 1.3rem;
+}
+.btn {
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  padding: calc(var(--space-size)*0.5) var(--space-size);
+}
+.mbti__header .complete-btn {
+  color: #666;
+  margin-left: calc(var(--space-size)*2);
+}
+.mbti__header .complete-btn.abled {
+  color: #fff;
+}
+.mbti__header .reset-btn {
+  margin-left: var(--space-size);
+}
+
+.mbti__header .selected-zone {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem
+}
+.mbti__header .selected-zone > li {
+  background-color: #000;
+  width: var(--mbti_seleted-size);
+  height: var(--mbti_seleted-size);
+  border: 4px outset wheat;
+  border-radius: 50%;
+  font-size: calc(var(--mbti_seleted-size)* 0.8);
+  font-family: var(--alphabet-font);
+}
+
+/* mbti 선택하는 부분 */
 .mbti__section {
   display: flex;
   justify-content: center;
@@ -52,7 +102,6 @@ body {
 }
 
 .mbti__box .mbti__description{
-  color: #fff;
   transition: 300ms ease-in;
 }
 .mbti__box .mbti__title {
@@ -69,7 +118,7 @@ body {
 }
 .mbti__box .mbti__alphabet{
   font-size: 7rem;
-  font-family: 'Jua', sans-serif;
+  font-family: var(--alphabet-font);
   color: var(--alphabet-color);
   margin-top: var(--sapce-minus-size);
   margin-bottom: calc(var(--sapce-minus-size)*2);
