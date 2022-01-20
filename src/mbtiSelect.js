@@ -22,6 +22,9 @@ export default class MbtiSelect {
       }
     });
     this.resetBtn.addEventListener('click', () => this.doResetBtn());
+    this.completeBtn.addEventListener('click', () =>
+      this.setCompositeAlphabet()
+    );
   }
 
   // 알파벳, 화살표, 제목에 hover 시 효과
@@ -79,5 +82,14 @@ export default class MbtiSelect {
       el.innerText = '?';
       el.style.color = '#999';
     });
+  }
+
+  // 설정완료 버튼 클릭 => 조합된 단어 초기화
+  setCompositeAlphabet() {
+    this.compositeAlphabet = '';
+    this.selectedAlphabets.forEach((el) => {
+      this.compositeAlphabet += el.innerText;
+    });
+    this.doResetBtn();
   }
 }
