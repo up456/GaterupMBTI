@@ -203,8 +203,6 @@ body {
   color: var(--p-color);
 }
 
-
-
 /* 알파뱃 hover */
 #e:hover {
   color: var(--e-color);
@@ -229,4 +227,35 @@ body {
 }
 #p:hover {
   color: var(--p-color);
+}
+
+
+/* modal부분  */
+.mbti_modal {
+}
+.mbti_modal .modal__container {
+  background-color: rgba(0, 0, 0, 0.808);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__container .mbti__img {
+  width: 35%;
+}
+.modal__container .mbti__board-btn {
+  font-size: 3rem;
+  padding: 1rem;
+  
+}
+.modal__container .mbti__x-btn {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background: none;
+  color: wheat;
+  border: none;
+  align-self: start;
 }

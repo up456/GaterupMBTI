@@ -1,4 +1,5 @@
 'use strict';
+import MbtiModal from './mbtiModal.js';
 
 export default class MbtiSelect {
   constructor() {
@@ -23,8 +24,10 @@ export default class MbtiSelect {
     });
     this.resetBtn.addEventListener('click', () => this.doResetBtn());
     this.completeBtn.addEventListener('click', () =>
-      this.setCompositeAlphabet()
+      this.showModalByCompositeAlphabet()
     );
+
+    this.mbtiModal = new MbtiModal();
   }
 
   // 알파벳, 화살표, 제목에 hover 시 효과
@@ -85,11 +88,12 @@ export default class MbtiSelect {
   }
 
   // 설정완료 버튼 클릭 => 조합된 단어 초기화
-  setCompositeAlphabet() {
+  showModalByCompositeAlphabet() {
     this.compositeAlphabet = '';
     this.selectedAlphabets.forEach((el) => {
       this.compositeAlphabet += el.innerText;
     });
+    this.mbtiModal.showModal(this.compositeAlphabet);
     this.doResetBtn();
   }
 }
