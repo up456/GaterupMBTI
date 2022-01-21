@@ -304,9 +304,10 @@ body {
   /* mbti 선택부분 */
   .mbti__section {
     margin-top: 60%;
+    margin-bottom: 30px;
   }
   .mbti__section .mbti__alphabet {
-    font-size: calc(var(--alphabet-font-size)*0.7) ;
+    font-size: calc(var(--alphabet-font-size)*0.8) ;
   }
 
 
@@ -315,7 +316,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 160px;
+    height: 172px;
     position: fixed;
     top: 0;
     background-color: #000;
@@ -325,9 +326,17 @@ body {
   }
   .complete-btn {
     width: 100px;
-    margin-top: 10px;
+    margin-top: 5px;
   }
   .mbti__header .mbti__header__help {
     font-size: 1.1rem;
+  }
+  .mbti__header .selected-zone {
+    margin-top: 18px;
+  }
+  .mbti__header .selected-zone::before {
+    content: "원을 클릭하면 해당 선택지로 이동합니다.";
+    transform: translate(10px, -30px);
+    position: absolute;
   }
 }
