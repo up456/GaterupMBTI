@@ -1,6 +1,8 @@
 # GaterupMBTI
 toy-project: MBTI게시판
 
+## [데모 사이트](https://up456.github.io/GaterupMBTI/)
+
 ## 기능
 ### 1. MBTI 간단하게 보기
 알파뱃 눌러서 간단한 mbti탐색
