@@ -8,6 +8,7 @@ export default class MbtiSelect {
     this.selectedAlphabets = this.selectedZone.querySelectorAll('li');
     this.completeBtn = document.querySelector('.complete-btn');
     this.resetBtn = document.querySelector('.reset-btn');
+    this.mbtiAlpahbets = document.querySelectorAll('.mbti__alphabet');
 
     this.mbtiSection.addEventListener('mouseover', (event) =>
       this.hoverEffect(event, 'remove')
@@ -18,6 +19,7 @@ export default class MbtiSelect {
     this.mbtiSection.addEventListener('click', (event) => {
       const alphabet = event.target.dataset.in;
       this.selectAlphabet(alphabet);
+      this.focusAlphabet(event.target);
       if (this.checkFullAlphabet()) {
         this.onActiveBtn();
       }
@@ -67,6 +69,47 @@ export default class MbtiSelect {
         return;
     }
   }
+  focusAlphabet(target) {
+    const alphabet = target.dataset.in;
+    if (target.className === 'mbti__alphabet') {
+      target.style.color = `var(--${alphabet}-color)`;
+      let mbtiAlpahbet;
+      switch (alphabet) {
+        case 'e':
+          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="i"]`);
+          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          break;
+        case 'i':
+          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="e"]`);
+          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          break;
+        case 's':
+          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="n"]`);
+          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          break;
+        case 'n':
+          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="s"]`);
+          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          break;
+        case 't':
+          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="f"]`);
+          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          break;
+        case 'f':
+          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="t"]`);
+          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          break;
+        case 'j':
+          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="p"]`);
+          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          break;
+        case 'p':
+          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="j"]`);
+          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          break;
+      }
+    }
+  }
 
   // 설정완료 버튼 활성화
   checkFullAlphabet() {
@@ -84,6 +127,9 @@ export default class MbtiSelect {
     this.selectedAlphabets.forEach((el) => {
       el.innerText = '?';
       el.style.color = '#999';
+    });
+    this.mbtiAlpahbets.forEach((el) => {
+      el.style.color = 'var(--alphabet-color)';
     });
   }
 
