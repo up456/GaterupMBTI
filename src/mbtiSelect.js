@@ -124,6 +124,10 @@ export default class MbtiSelect {
     this.completeBtn.removeAttribute('disabled');
     this.completeBtn.classList.add('abled');
   }
+  unActiveBtn() {
+    this.completeBtn.setAttribute('disabled', 'true');
+    this.completeBtn.classList.remove('abled');
+  }
 
   // 리셋 버튼
   doResetBtn() {
@@ -134,6 +138,7 @@ export default class MbtiSelect {
     this.mbtiAlpahbets.forEach((el) => {
       el.style.color = 'var(--alphabet-color)';
     });
+    this.unActiveBtn();
   }
 
   // 설정완료 버튼 클릭 => 조합된 단어 초기화
