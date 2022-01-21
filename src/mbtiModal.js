@@ -17,6 +17,7 @@ export default class MbtiModal {
     </div>
     `;
     this.mbtiModal.innerHTML = template;
+    this.mbtiModal.style.opacity = 1;
     this.init();
   }
 
@@ -27,5 +28,6 @@ export default class MbtiModal {
 
   closeModal() {
     this.mbtiModal.innerHTML = '';
+    this.mbtiModal.style.opacity = 0;
   }
 }
