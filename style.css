@@ -238,16 +238,16 @@ body {
   opacity: 0
 }
 .mbti_modal .modal__container {
-  background-color: rgba(253, 253, 253, 0.959);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   position: fixed;
   top: 5%;
   left: 12%;
   width: 75vw;
   height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  background-color: rgba(253, 253, 253, 0.959);
   border-radius: 10px;
   box-shadow: 2px 2px 5px 3px rgb(141, 167, 194);
 }
@@ -301,18 +301,8 @@ body {
 
 /* 미디어쿼리 */
 @media (max-width:740px) {
-  /* mbti 선택부분 */
-  .mbti__section {
-    margin-top: 60%;
-    margin-bottom: 30px;
-  }
-  .mbti__section .mbti__alphabet {
-    font-size: calc(var(--alphabet-font-size)*0.8) ;
-  }
-
-
-  /* 모달 부분 */
-  .mbti__header{
+  /* 헤더부분 부분 */
+  .mbti__header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -321,8 +311,6 @@ body {
     top: 0;
     background-color: #000;
     border-bottom: 6px double #fff;
-  }
-  .btn {
   }
   .complete-btn {
     width: 100px;
@@ -338,5 +326,35 @@ body {
     content: "원을 클릭하면 해당 선택지로 이동합니다.";
     transform: translate(10px, -30px);
     position: absolute;
+  }
+
+  /* mbti 선택부분 */
+  .mbti__section {
+    margin-top: 60%;
+    margin-bottom: 30px;
+  }
+  .mbti__section .mbti__alphabet {
+    font-size: calc(var(--alphabet-font-size)*0.8) ;
+  }
+
+  /* 모달 부분 */
+  .mbti_modal .modal__container {
+    flex-direction: column-reverse;
+    width: 90vw;
+    top: 15px;
+    left: 18px;
+  }
+  .modal__container .mbti__img {
+    width: 97%;
+    border-radius: 10px;
+  }
+  .modal__container .btn-container .modal-btn {
+    font-size: 1rem;
+    margin: auto;
+    width: 87vw;
+    margin-bottom: var(--space-size);
+  }
+  .modal__container .mbti__x-btn {
+    transform: translate(150px, -30px);
   }
 }
