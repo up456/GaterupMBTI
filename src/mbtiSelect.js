@@ -77,42 +77,39 @@ export default class MbtiSelect {
     const alphabet = target.dataset.in;
     if (target.className === 'mbti__alphabet') {
       target.style.color = `var(--${alphabet}-color)`;
-      let mbtiAlpahbet;
       switch (alphabet) {
         case 'e':
-          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="i"]`);
-          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          this.restoreColor('i');
           break;
         case 'i':
-          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="e"]`);
-          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          this.restoreColor('e');
           break;
         case 's':
-          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="n"]`);
-          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          this.restoreColor('n');
           break;
         case 'n':
-          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="s"]`);
-          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          this.restoreColor('s');
           break;
         case 't':
-          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="f"]`);
-          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          this.restoreColor('f');
           break;
         case 'f':
-          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="t"]`);
-          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          this.restoreColor('t');
           break;
         case 'j':
-          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="p"]`);
-          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          this.restoreColor('p');
           break;
         case 'p':
-          mbtiAlpahbet = document.querySelector(`.mbti__alphabet[data-in="j"]`);
-          mbtiAlpahbet.style.color = 'var(--alphabet-color)';
+          this.restoreColor('j');
           break;
       }
     }
+  }
+  restoreColor(alphabet) {
+    let mbtiAlpahbet = document.querySelector(
+      `.mbti__alphabet[data-in="${alphabet}"]`
+    );
+    mbtiAlpahbet.style.color = 'var(--alphabet-color)';
   }
 
   // 설정완료 버튼 활성화
@@ -172,8 +169,7 @@ export default class MbtiSelect {
     }
   }
   moveSelectZone(alphabet) {
-    let mbtiDescription;
-    mbtiDescription = document.querySelector(
+    let mbtiDescription = document.querySelector(
       `.mbti__description[data-out="${alphabet}"]`
     );
     mbtiDescription.scrollIntoView({ block: 'end' });
