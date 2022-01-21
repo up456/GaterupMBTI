@@ -72,6 +72,7 @@ export default class MbtiSelect {
         return;
     }
   }
+
   focusAlphabet(target) {
     const alphabet = target.dataset.in;
     if (target.className === 'mbti__alphabet') {
@@ -154,36 +155,28 @@ export default class MbtiSelect {
   // 입력창 누르면 해당 선택사항으로 이동
   viewSelectZone(event) {
     const selectZoneName = event.target.className;
-    let mbtiDescription;
+
     switch (selectZoneName) {
       case 'selected-one':
-        mbtiDescription = document.querySelector(
-          '.mbti__description[data-out="i"]'
-        );
-        mbtiDescription.scrollIntoView({ block: 'end' });
-        window.scrollBy(0, 20);
+        this.moveSelectZone('i');
         break;
       case 'selected-two':
-        mbtiDescription = document.querySelector(
-          '.mbti__description[data-out="n"]'
-        );
-        mbtiDescription.scrollIntoView({ block: 'end' });
-        window.scrollBy(0, 20);
+        this.moveSelectZone('n');
         break;
       case 'selected-three':
-        mbtiDescription = document.querySelector(
-          '.mbti__description[data-out="f"]'
-        );
-        mbtiDescription.scrollIntoView({ block: 'end' });
-        window.scrollBy(0, 20);
+        this.moveSelectZone('f');
         break;
       case 'selected-four':
-        mbtiDescription = document.querySelector(
-          '.mbti__description[data-out="p"]'
-        );
-        mbtiDescription.scrollIntoView({ block: 'end' });
-        window.scrollBy(0, 7.5);
+        this.moveSelectZone('p');
         break;
     }
+  }
+  moveSelectZone(alphabet) {
+    let mbtiDescription;
+    mbtiDescription = document.querySelector(
+      `.mbti__description[data-out="${alphabet}"]`
+    );
+    mbtiDescription.scrollIntoView({ block: 'end' });
+    window.scrollBy(0, 7);
   }
 }
