@@ -8,7 +8,7 @@ export default class MbtiModal {
   showModal(compositeAlphabet) {
     const template = `
     <div class="modal__container">
-      <img class="mbti__img" src="./img/${compositeAlphabet}.jfif" alt="${compositeAlphabet}사진">
+      <img class="mbti__img" src="./img/${compositeAlphabet.toLowerCase()}.jfif" alt="${compositeAlphabet}사진">
       <div class="btn-container">
       <button class="mbti__detail-btn modal-btn" data-mbti="${compositeAlphabet}">${compositeAlphabet} 자세히 보기</button>
       <button class="mbti__board-btn modal-btn" data-mbti="${compositeAlphabet}">${compositeAlphabet} 게시판 가기</button>
